@@ -1,0 +1,11 @@
+MakeSpawnNotSleep - Make Spawns, Not Sleep!
+Version: v1.1
+
+After installing MakeSpawnNotSleep, no users will be able to sleep, instead, whenever anyone clicks a bed, his spawn will be set to his current location.
+
+Features:
+Makes spawns set instead of sleeping.
+Removes the "you can only sleep at night" message.
+Still allows for beds to break!
+
+http://forums.bukkit.org/threads/misc-makespawnnotsleep-v1-1-no-more-sleeping-more-spawn-setting-terraria-style-beds-1000.30651/#post-561494
