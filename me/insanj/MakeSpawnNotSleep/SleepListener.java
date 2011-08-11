@@ -3,9 +3,9 @@
 
  Please do not modify or decompile at any date, but feel free to distribute with credit.
  Production began on Tuesday, August 9th, 2011.
- Last edited on: 8/10/11
+ Last edited on: 8/11/11
 
- MakeSpawnNotSleep 1.2!
+ MakeSpawnNotSleep 1.2.1!
  Special thanks to: 
  		Ross Gosling, for the idea and feature designs!
 
@@ -30,6 +30,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerBedEnterEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
@@ -58,13 +59,13 @@ public class SleepListener extends PlayerListener
 	public void onPlayerInteract(PlayerInteractEvent event){
 		if( event.getClickedBlock() != null && event.getClickedBlock().getType().equals(Material.BED_BLOCK) ){
 			event.setCancelled(true);
-			if( distance(spawn, event.getPlayer().getLocation()) > 3.5 ){
-				spawn = event.getPlayer().getLocation();
-				writeSpawnLocation(event.getPlayer());
-				event.getPlayer().sendMessage(ChatColor.AQUA + "Your new spawn has been set!");
-			}//end if
-			
-			else{
+			if( event.getAction() == Action.RIGHT_CLICK_BLOCK ){
+				if( distance(spawn, event.getPlayer().getLocation()) > 3.5 ){
+					spawn = event.getPlayer().getLocation();
+					writeSpawnLocation(event.getPlayer());
+					event.getPlayer().sendMessage(ChatColor.AQUA + "Your new spawn has been set!");
+				}//end if
+			} else{
 				event.getClickedBlock().setTypeId(0);
 				event.getClickedBlock().getWorld().dropItemNaturally(event.getClickedBlock().getLocation(), new ItemStack(355, 1));
 			}
