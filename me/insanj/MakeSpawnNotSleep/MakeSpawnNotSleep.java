@@ -5,7 +5,7 @@
  Production began on Tuesday, August 9th, 2011.
  Last edited on: 8/10/11
 
- MakeSpawnNotSleep 1.1!
+ MakeSpawnNotSleep 1.2!
  Special thanks to: 
  		Ross Gosling, for the idea and feature designs!
 
@@ -31,7 +31,7 @@ public class MakeSpawnNotSleep extends JavaPlugin
 {
 	private static final Logger log = Logger.getLogger("Minecraft");
 	private final SleepListener bedListener = new SleepListener(this);
-	private static final String version = "1.1";
+	private static final String version = "1.2";
 		
 	@Override
 	public void onEnable(){		
@@ -39,6 +39,8 @@ public class MakeSpawnNotSleep extends JavaPlugin
 		pm.registerEvent(Event.Type.PLAYER_BED_ENTER, bedListener, Event.Priority.Normal, this);
 		pm.registerEvent(Event.Type.PLAYER_INTERACT, bedListener, Event.Priority.Normal, this);
 		pm.registerEvent(Event.Type.PLAYER_RESPAWN, bedListener, Event.Priority.Normal, this);
+		pm.registerEvent(Event.Type.PLAYER_JOIN, bedListener, Event.Priority.Normal, this);
+
 		
 		log.info("{MakeSpawnNotSleep} plugin version " + version + " has successfully started.");
 	}//end method onEnable()
