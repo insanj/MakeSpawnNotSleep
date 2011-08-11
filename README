@@ -1,11 +1,13 @@
 MakeSpawnNotSleep - Make Spawns, Not Sleep!
-Version: v1.1
+Version: v1.2.1
 
-After installing MakeSpawnNotSleep, no users will be able to sleep, instead, whenever anyone clicks a bed, his spawn will be set to his current location.
+The modern day home plugin! After installing, whenever a user right-clicks a bed, instead of laying down, the plugin will set the user's own spawn point to the current location. Spawn points for the user can only be set about three blocks away from where his/her previous spawn point was set. Left-clicking will just destroy the bed. The config file is elegant, easy to understand, and easy to add to, edit, or delete.
 
 Features:
-Makes spawns set instead of sleeping.
-Removes the "you can only sleep at night" message.
-Still allows for beds to break!
+Users can right-click beds to set spawn!
+Left-click to instantly break the bed like usual!
+Automatically generated file that contains all the spawn locations of the users.
+Persistant through server reloads, stops, relogs, you name it!
+Multiple worlds can be used!
 
-http://forums.bukkit.org/threads/misc-makespawnnotsleep-v1-1-no-more-sleeping-more-spawn-setting-terraria-style-beds-1000.30651/#post-561494
+http://forums.bukkit.org/threads/gen-misc-makespawnnotsleep-v1-2-1-player-spawns-that-use-beds-and-some-other-cool-stuff-1000.30651/
